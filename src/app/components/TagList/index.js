@@ -7,6 +7,7 @@ import {
     StyledTagList,
     StyledIconClose,
 } from './TagList.sc';
+import isEqual from "lodash/isEqual";
 
 const propTypes = {
     tags: PropTypes.array.isRequired,
@@ -19,12 +20,18 @@ class TagList extends React.Component {
         super(props);
         this.onClickHandler = this.onClickHandler.bind(this);
     }
+
+    componentDidUpdate (prevProps) {
+        if (!isEqual(this.props.tags, prevProps.tags)) {
+            this.props.photosLocalService();
+        }
+    }
+
     onClickHandler (event) {
         const item = event.target.dataset.tag;
 
         if (item) {
             this.props.removeTag(item);
-            this.props.photosLocalService();
         }
     };
 
