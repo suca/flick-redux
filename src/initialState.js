@@ -8,7 +8,7 @@ const initialState = {
     isLoading: false,
     isError: false,
     photosData: [],
-    maxItemsPerCall: 10,
+    maxItemsPerCall: 20,
 };
 
 export default initialState;
