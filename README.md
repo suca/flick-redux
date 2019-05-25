@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 The repo started using `create-react-app` but it ended up being customized and the `npm eject` was executed.
 There are some part like `ServiceWorkers` that were not implemented yet, as well as `unit tests`
 
+## [DEMO](https://suca.github.io/flickr-redux/)
+
 ## Available Scripts
 
 In the project directory, you can run:
